@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import pageImage from "../../assets/images/page-image.jpg";
+import ParticlesBackground from "../particle";
 
 const LandingPage = () => {
   return (
@@ -24,12 +24,19 @@ const LandingPage = () => {
           </nav>
         </div>
 
-        <div
-          className="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
-          style={{ backgroundImage: `url(${pageImage})` }}
-        >
-          <div className="overlay"></div>
+        <div className="hero text-center text-white d-flex flex-column justify-content-center align-items-center">
           <div className="title ">
+            <div
+              className="particles-container"
+              style={{
+                height: "100vh",
+                position:"absolute",
+                zIndex:-9999
+              }}
+            >
+              <ParticlesBackground />
+            </div>
+
             <h1 className="display-2 heroTitle fw-bold">
               TechJ – Delivering Quality{" "}
               <span className="highlight text-success">
@@ -124,8 +131,7 @@ const LandingPage = () => {
         >
           <div>
             <h2 className="fs-1 fw-bold p-5">
-              Dịch vụ của{" "}
-              <span className="highlight text-success">TechJ</span>
+              Dịch vụ của <span className="highlight text-success">TechJ</span>
             </h2>
             <div className="images  mb-4">
               <div className="d-flex gap-5 text-align-center justify-content-between align-items-center">
@@ -161,15 +167,14 @@ const LandingPage = () => {
         <div
           className="text-center text-white"
           style={{
-            backgroundColor: "black",
             margin: "30px 10%",
             padding: "6% 8%",
           }}
         >
           <h2 className="mb-4 display-6 fw-bold">
-          <span className="highlight text-success">Techj</span>
-           – Đồng hành cùng doanh nghiệp trong hành trình tối ưu hóa và đổi mới với các giải pháp gia công phần mềm AI hàng đầu.{" "}
-            
+            <span className="highlight text-success">Techj</span>– Đồng hành
+            cùng doanh nghiệp trong hành trình tối ưu hóa và đổi mới với các
+            giải pháp gia công phần mềm AI hàng đầu.{" "}
           </h2>
           <div className="ctaButton2 fs-5 mt-4">Call to action</div>
         </div>
