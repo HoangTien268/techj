@@ -20,7 +20,7 @@ body {
   background-color: rgba(46, 79, 103, 0.5);
   z-index: 0;
 }
-.title{
+.title {
   position: relative;
   background-color: none;
 }
@@ -56,7 +56,7 @@ body {
   width: 30px; /* Điều chỉnh kích thước biểu tượng tại đây */
   height: 30px; /* Điều chỉnh kích thước biểu tượng tại đây */
   border-radius: 50%;
-  color: #fff;
+  border: 1px solid #fff;
   font-size: 14px;
   text-decoration: none;
   font-weight: bold;
