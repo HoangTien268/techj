@@ -22,6 +22,7 @@ body {
 }
 .title{
   position: relative;
+  background-color: none;
 }
 
 .ctaButton2 {
