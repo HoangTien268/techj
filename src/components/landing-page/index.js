@@ -28,17 +28,7 @@ const LandingPage = () => {
           className="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
           id="home"
         >
-          <div className="title ">
-            <div
-              className="particles-container"
-              style={{
-                height: "100vh",
-                position: "absolute",
-                zIndex: -9999,
-              }}
-            >
-              <ParticlesBackground />
-            </div>
+          <div className="title animated-header ">
 
             <h1 className="display-2 heroTitle fw-bold">
               TechJ – Delivering Quality{" "}

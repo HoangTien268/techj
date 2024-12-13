@@ -3,13 +3,28 @@ body {
 }
 .particles-container {
   position: absolute;
-  z-index: 10;   /* Điều chỉnh z-index nếu cần */
+  z-index: 10; /* Điều chỉnh z-index nếu cần */
 }
 .hero {
   height: 100vh;
   position: relative;
   color: white;
   text-align: center;
+  background: linear-gradient(90deg, #296031, #0e0e0e, #296031, #0e0e0e);
+  animation: waveBackground 15s ease-in-out infinite; /* Tăng thời gian lên 24s */
+  background-size: 200% 100%;
+}
+
+@keyframes waveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .title {
@@ -63,7 +78,12 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ khi hover */
 }
 .cta-button {
-  background-color: rgba(5, 8, 10, 0.1); /* Black background with 50% transparency */
+  background-color: rgba(
+    5,
+    8,
+    10,
+    0.1
+  ); /* Black background with 50% transparency */
   color: white; /* White text color */
   padding: 15px 30px; /* Padding for spacing */
   font-size: 18px; /* Font size */
