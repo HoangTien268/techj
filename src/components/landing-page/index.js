@@ -91,7 +91,7 @@ const LandingPage = () => {
             style={{ padding: "30px 10%" }}
             id="team"
           >
-            <h2 className="fs-1 fw-bold p-5 featureItem">
+            <h2 className="fs-1 fw-bold p-5 slogan">
               Tại sao chọn{" "}
               <span className="highlight text-success">TechJ?</span>
             </h2>
@@ -142,15 +142,15 @@ const LandingPage = () => {
             }}
           >
             <div className="row stats">
-              <div className="col-md-4 featureItem">
+              <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">270</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
-              <div className="col-md-4 featureItem">
+              <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">60</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
-              <div className="col-md-4 featureItem">
+              <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-success">1,442</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
@@ -158,12 +158,12 @@ const LandingPage = () => {
           </div>
 
           <div
-            className="text-center text-white featureItem animate-on-scroll"
+            className="text-center text-white animate-on-scroll"
             style={{ padding: "30px 10%" }}
             id="case-studies"
           >
             <div>
-              <h2 className="fs-1 fw-bold p-5">
+              <h2 className="fs-1 fw-bold p-5 slogan">
                 Dịch vụ của{" "}
                 <span className="highlight text-success">TechJ</span>
               </h2>
