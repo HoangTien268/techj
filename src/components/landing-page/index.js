@@ -26,7 +26,7 @@ const LandingPage = () => {
 
         <div className="hero text-center text-white d-flex flex-column justify-content-center align-items-center">
           <div className="title ">
-            <div
+            {/* <div
               className="particles-container"
               style={{
                 height: "100vh",
@@ -35,7 +35,7 @@ const LandingPage = () => {
               }}
             >
               <ParticlesBackground />
-            </div>
+            </div> */}
 
             <h1 className="display-2 heroTitle fw-bold">
               TechJ – Delivering Quality{" "}
