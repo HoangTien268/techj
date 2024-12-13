@@ -3,27 +3,38 @@ body {
 }
 .particles-container {
   position: absolute;
-  z-index: 10; /* Điều chỉnh z-index nếu cần */
+  z-index: 10;
 }
 .hero {
   height: 100vh;
   position: relative;
   color: white;
   text-align: center;
-  background: linear-gradient(90deg, #296031, #0e0e0e, #296031, #0e0e0e);
-  animation: waveBackground 15s ease-in-out infinite; /* Tăng thời gian lên 24s */
-  background-size: 200% 100%;
+}
+.heroTitle,
+.hero p,
+.hero .cta-button {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideInFromTop 1s ease-out forwards;
 }
 
-@keyframes waveBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+.heroTitle {
+  animation-delay: 0.5s;
+}
+
+.hero p {
+  animation-delay: 1s;
+}
+
+.hero .cta-button {
+  animation-delay: 1.5s;
+}
+
+@keyframes slideInFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -60,8 +71,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px; /* Điều chỉnh kích thước biểu tượng tại đây */
-  height: 30px; /* Điều chỉnh kích thước biểu tượng tại đây */
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid #fff;
   font-size: 14px;
@@ -70,34 +81,96 @@ body {
   transition: background-color 0.3s;
 }
 .featureItem {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .featureItem:hover {
-  transform: translateY(-10px); /* Di chuyển lên trên một chút khi hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ khi hover */
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .cta-button {
-  background-color: rgba(
-    5,
-    8,
-    10,
-    0.1
-  ); /* Black background with 50% transparency */
-  color: white; /* White text color */
-  padding: 15px 30px; /* Padding for spacing */
-  font-size: 18px; /* Font size */
-  font-weight: bold; /* Bold font weight */
-  border: none; /* Remove default border */
-  border-radius: 30px; /* Fully rounded corners */
-  letter-spacing: 1px; /* Slight spacing between letters */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-  cursor: pointer; /* Change the cursor to pointer on hover */
+  background-color: rgba(5, 8, 10, 0.1);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
   border: 1px solid #198754;
 }
 
-.cta-button:hover {
-  background-color: #198754; /* Green background on hover */
-  transform: scale(1.05); /* Slightly increase size on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+.cta-button1 {
+  background-color: rgba(5, 8, 10, 0.1);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #198754;
+}
+
+.cta-button1:hover {
+  background-color: #198754;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Initial state: elements are hidden */
+/* Initial state: elements are hidden */
+.heroTitle,
+.featureItem,
+.cta-button1,
+.stat-description,
+.paragraph,
+.slogan {
+  opacity: 0;
+  transform: translateY(50px); /* Start from below */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+}
+
+/* When elements are in view and the 'visible' class is added */
+.heroTitle.visible,
+.featureItem.visible,
+.cta-button1.visible,
+.stat-description.visible,
+.paragraph.visible,
+.slogan.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to the normal position */
+}
+
+/* Hover effect on featureItem */
+.featureItem:hover {
+  transform: translateY(-10px); /* Move up slightly when hovered */
+  box-shadow: 1s 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure the hovered element is on top */
+}
+
+/* Animation for the fade-in and slide-up effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Other styles */
+.heroTitle,
+.featureItem,
+.cta-button1,
+.stat-description,
+.paragraph,
+.slogan {
+  transition: transform 2s ease, opacity 2s ease; /* For hover and normal transitions */
 }

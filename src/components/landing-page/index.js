@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import ParticlesBackground from "../particle";
 
 const LandingPage = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const elements = document.querySelectorAll(
+      ".heroTitle, .featureItem, .cta-button1, .stat-description, .paragraph , .slogan"
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className="container-fluid p-0">
@@ -28,7 +56,17 @@ const LandingPage = () => {
           className="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
           id="home"
         >
-          <div className="title animated-header ">
+          <div className="title">
+            <div
+              className="particles-container animate-on-scroll"
+              style={{
+                height: "100vh",
+                position: "absolute",
+                zIndex: -9999,
+              }}
+            >
+              <ParticlesBackground />
+            </div>
 
             <h1 className="display-2 heroTitle fw-bold">
               TechJ – Delivering Quality{" "}
@@ -36,7 +74,7 @@ const LandingPage = () => {
                 Software Solutions.
               </span>
             </h1>
-            <p className="fs-4 fw-normal mt-4 " style={{ padding: "0 20%" }}>
+            <p className="fs-4 fw-normal mt-4" style={{ padding: "0 20%" }}>
               TechJ chuyên phát triển phần mềm ứng dụng AI, giúp doanh nghiệp
               tối ưu hóa quy trình và tăng cường hiệu suất một cách thông minh
               và hiệu quả.
@@ -46,13 +84,14 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+
         <div className="bg-black">
           <div
-            className="features text-center text-white"
+            className="features text-center text-white animate-on-scroll"
             style={{ padding: "30px 10%" }}
             id="team"
           >
-            <h2 className="fs-1 fw-bold p-5">
+            <h2 className="fs-1 fw-bold p-5 featureItem">
               Tại sao chọn{" "}
               <span className="highlight text-success">TechJ?</span>
             </h2>
@@ -97,21 +136,21 @@ const LandingPage = () => {
           </div>
 
           <div
-            className=" text-center"
+            className="text-center animate-on-scroll"
             style={{
               padding: "50px 10%",
             }}
           >
             <div className="row stats">
-              <div className="col-md-4">
+              <div className="col-md-4 featureItem">
                 <h1 className="fw-bold display-4 text-white">270</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4 featureItem">
                 <h1 className="fw-bold display-4 text-white">60</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4 featureItem">
                 <h1 className="fw-bold display-4 text-success">1,442</h1>
                 <p className="fw-bold stat-description">Description</p>
               </div>
@@ -119,7 +158,7 @@ const LandingPage = () => {
           </div>
 
           <div
-            className=" text-center text-white"
+            className="text-center text-white featureItem animate-on-scroll"
             style={{ padding: "30px 10%" }}
             id="case-studies"
           >
@@ -128,7 +167,7 @@ const LandingPage = () => {
                 Dịch vụ của{" "}
                 <span className="highlight text-success">TechJ</span>
               </h2>
-              <div className="images  mb-4">
+              <div className="images mb-4">
                 <div className="d-flex gap-5 text-align-center justify-content-between align-items-center featureItem">
                   <img
                     className="img-fluid image"
@@ -137,7 +176,7 @@ const LandingPage = () => {
                   />
                   <p className="paragraph text-white">
                     Chúng tôi chuyên phát triển các phần mềm ứng dụng trí tuệ
-                    nhân tạo, giúp tối ưu hóa quy trình kinh doanh.Đáp ứng các
+                    nhân tạo, giúp tối ưu hóa quy trình kinh doanh. Đáp ứng các
                     nhu cầu đặc thù của doanh nghiệp bằng các giải pháp AI được
                     thiết kế riêng, mang lại hiệu quả và tính cạnh tranh cao.
                   </p>
@@ -145,7 +184,7 @@ const LandingPage = () => {
                 <div className="d-flex gap-5 text-align-center justify-content-between align-items-center featureItem">
                   <p className="paragraph text-white">
                     Hỗ trợ doanh nghiệp tiết kiệm nguồn lực và thời gian với các
-                    sản phẩm AI chất lượng cao, triển khai nhanh chóng.Đảm bảo
+                    sản phẩm AI chất lượng cao, triển khai nhanh chóng. Đảm bảo
                     hệ thống luôn được cập nhật công nghệ mới nhất, hoạt động ổn
                     định và hiệu quả lâu dài.
                   </p>
@@ -160,19 +199,19 @@ const LandingPage = () => {
           </div>
 
           <div
-            className="text-center text-white"
+            className="text-center text-white animate-on-scroll"
             style={{
               margin: "30px 10%",
               padding: "6% 8%",
             }}
           >
-            <h2 className="mb-4 display-6 fw-bold">
+            <h2 className="mb-4 display-6 fw-bold slogan">
               <span className="highlight text-success">Techj</span>– Đồng hành
               cùng doanh nghiệp trong hành trình tối ưu hóa và đổi mới với các
-              giải pháp gia công phần mềm AI hàng đầu.{" "}
+              giải pháp gia công phần mềm AI hàng đầu.
             </h2>
             <div className="cta mt-5 rounded mt-4">
-              <button className="cta-button">Call to Action</button>
+              <button className="cta-button1">Call to Action</button>
             </div>
           </div>
 
