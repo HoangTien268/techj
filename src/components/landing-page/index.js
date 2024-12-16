@@ -40,16 +40,16 @@ const LandingPage = () => {
           </div>
           <nav className="nav">
             <a href="#home" className="nav-link text-white">
-              Home
-            </a>
-            <a href="#case-studies" className="nav-link text-white">
-              Case studies
+              Trang chủ
             </a>
             <a href="#team" className="nav-link text-white">
-              Team
+              Về chúng tôi
+            </a>
+            <a href="#case-studies" className="nav-link text-white">
+              Dịch vụ
             </a>
             <a href="#contact" className="nav-link text-white">
-              Contact
+              Liên hệ
             </a>
           </nav>
         </div>
@@ -82,7 +82,7 @@ const LandingPage = () => {
               và hiệu quả.
             </p>
             <div className="cta mt-3 rounded mt-4">
-              <button className="cta-button">Call to Action</button>
+              <button className="cta-button">Liên hệ với chúng tôi</button>
             </div>
           </div>
         </div>
@@ -146,15 +146,15 @@ const LandingPage = () => {
             <div className="row stats">
               <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">270</h1>
-                <p className="fw-bold stat-description">Description</p>
+                <p className="fw-bold stat-description">Nhân viên</p>
               </div>
               <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">60</h1>
-                <p className="fw-bold stat-description">Description</p>
+                <p className="fw-bold stat-description">Đối tác</p>
               </div>
               <div className="col-md-4 slogan">
-                <h1 className="fw-bold display-4 text-success">1,442</h1>
-                <p className="fw-bold stat-description">Description</p>
+                <h1 className="fw-bold display-4 text-success">315</h1>
+                <p className="fw-bold stat-description">Sản phẩm</p>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ const LandingPage = () => {
               giải pháp gia công phần mềm AI hàng đầu.
             </h2>
             <div className="cta mt-5 rounded mt-4">
-              <button className="cta-button1">Call to Action</button>
+              <button className="cta-button1">Liên hệ với chúng tôi</button>
             </div>
           </div>
 
@@ -224,16 +224,16 @@ const LandingPage = () => {
           >
             <div className="d-flex gap-3">
               <a href="#home" className="nav-link text-white">
-                Home
-              </a>
-              <a href="#case-studies" className="nav-link text-white">
-                Case studies
+                Trang chủ
               </a>
               <a href="#team" className="nav-link text-white">
-                Team
+                Về chúng tôi
+              </a>
+              <a href="#case-studies" className="nav-link text-white">
+                Dịch vụ
               </a>
               <a href="#contact" className="nav-link text-white">
-                Contact
+                Liên hệ
               </a>
             </div>
             <div className="social-icons ">
