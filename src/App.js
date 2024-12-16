@@ -8,6 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className="App">
+      <head>
+        <title>TechJ</title>
+        <link rel="icon" href="favicon.ico" />
+      </head>
       <LandingPage />
     </div>
   );
