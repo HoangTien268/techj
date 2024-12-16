@@ -5,7 +5,7 @@ body {
   position: absolute;
   z-index: 10;
 }
-.logo{
+.logo {
   font-size: large;
   font-weight: bold;
 }
@@ -126,6 +126,11 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.cta-button:hover {
+  background-color: #198754;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 /* Initial state: elements are hidden */
 /* Initial state: elements are hidden */
 .heroTitle,
