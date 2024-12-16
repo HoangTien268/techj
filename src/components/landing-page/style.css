@@ -5,6 +5,10 @@ body {
   position: absolute;
   z-index: 10;
 }
+.logo{
+  font-size: large;
+  font-weight: bold;
+}
 .hero {
   height: 100vh;
   position: relative;
@@ -132,7 +136,7 @@ body {
 .slogan {
   opacity: 0;
   transform: translateY(50px); /* Start from below */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out; /* Smooth transition for opacity and transform */
 }
 
 /* When elements are in view and the 'visible' class is added */

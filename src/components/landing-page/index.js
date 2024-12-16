@@ -35,7 +35,9 @@ const LandingPage = () => {
     <>
       <div className="container-fluid p-0">
         <div className="d-flex justify-content-between align-items-center p-3 fixed-top bg-black shadow-sm text-white">
-          <div className="logo">LOGO</div>
+          <div className="logo fs-3">
+            Tech<span className="highlight text-success">J</span>
+          </div>
           <nav className="nav">
             <a href="#home" className="nav-link text-white">
               Home
@@ -98,7 +100,7 @@ const LandingPage = () => {
             <div className="row p-3">
               <div className="col-md-4 featureItem">
                 <img
-                  src={require("../../assets/images/page-image.jpg")}
+                  src={require("../../assets/images/quality.png")}
                   alt="Feature 1"
                   className="img-fluid featureImage mb-3"
                 />
@@ -123,7 +125,7 @@ const LandingPage = () => {
               </div>
               <div className="col-md-4 featureItem">
                 <img
-                  src={require("../../assets/images/page-image.jpg")}
+                  src={require("../../assets/images/solution.png")}
                   alt="Feature 3"
                   className="img-fluid featureImage mb-3"
                 />
@@ -170,9 +172,9 @@ const LandingPage = () => {
               <div className="images mb-4">
                 <div className="d-flex gap-5 text-align-center justify-content-between align-items-center featureItem">
                   <img
+                    src={require("../../assets/images/AISoftware.png")}
+                    alt="Feature 3"
                     className="img-fluid image"
-                    src="https://via.placeholder.com/300"
-                    alt="Placeholder"
                   />
                   <p className="paragraph text-white">
                     Chúng tôi chuyên phát triển các phần mềm ứng dụng trí tuệ
@@ -189,9 +191,9 @@ const LandingPage = () => {
                     định và hiệu quả lâu dài.
                   </p>
                   <img
+                    src={require("../../assets/images/support.png")}
+                    alt="Feature 3"
                     className="img-fluid image"
-                    src="https://via.placeholder.com/300"
-                    alt="Placeholder"
                   />
                 </div>
               </div>
@@ -206,7 +208,7 @@ const LandingPage = () => {
             }}
           >
             <h2 className="mb-4 display-6 fw-bold slogan">
-              <span className="highlight text-success">Techj</span>– Đồng hành
+              <span className="highlight text-success">TechJ</span>– Đồng hành
               cùng doanh nghiệp trong hành trình tối ưu hóa và đổi mới với các
               giải pháp gia công phần mềm AI hàng đầu.
             </h2>
@@ -220,7 +222,7 @@ const LandingPage = () => {
             style={{ padding: "0 10% 50px 10%" }}
             id="contact"
           >
-            <div className="d-flex gap-2">
+            <div className="d-flex gap-3">
               <a href="#home" className="nav-link text-white">
                 Home
               </a>
