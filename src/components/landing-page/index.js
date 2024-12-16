@@ -38,7 +38,7 @@ const LandingPage = () => {
           <div className="logo fs-3">
             Tech<span className="highlight text-success">J</span>
           </div>
-          <nav className="nav">
+          {/* <nav className="nav">
             <a href="#home" className="nav-link text-white">
               Home
             </a>
@@ -51,7 +51,7 @@ const LandingPage = () => {
             <a href="#contact" className="nav-link text-white">
               Contact
             </a>
-          </nav>
+          </nav> */}
         </div>
 
         <div
