@@ -146,7 +146,7 @@ const LandingPage = () => {
             <div className="row stats">
               <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">270</h1>
-                <p className="fw-bold stat-description">Nhân viên</p>
+                <p className="fw-bold stat-description">Thành viên</p>
               </div>
               <div className="col-md-4 slogan">
                 <h1 className="fw-bold display-4 text-white">60</h1>
